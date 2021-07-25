@@ -45,8 +45,12 @@ const MovieInfo = ({ movie }) =>{
                     <div className='director'>
                         <h3>DIRECTOR{movie.directors.length > 1 ? 'S' : ''}</h3>
 
-                        {movie.directors.map(director=>{
+                        {movie.directors.map(director=>
+                        
+                        {
+                            return(
                             <p key={director.credit_id}>{director.name}</p>
+                            )
                         })}
                     </div>
                 </div>

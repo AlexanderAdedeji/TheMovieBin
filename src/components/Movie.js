@@ -14,6 +14,7 @@ import Spinner from './Loading/Loading';
 import UseMovieFetch from '../hooks/useMovieFetch';
 import BreadCrumb from './BreadCrumb/BreadCrumb';
 import MovieInfo from './MovieInfo/MovieInfo';
+import MovieInfoBar from './MovieInfoBar/MovieInfoBar';
 
 
 const Movie = () =>{
@@ -28,10 +29,13 @@ const Movie = () =>{
     if(error) return <div>An Error Occured</div>
 
     console.log(movieDetails, loading, error, movieId)
+
     return (
         <>
             <BreadCrumb movieTitle={movieDetails.original_title}/>
             <MovieInfo movie={movieDetails}/>
+            <MovieInfoBar movie={movieDetails}/>
+       
          
          </>
        
