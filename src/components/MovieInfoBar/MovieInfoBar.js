@@ -11,11 +11,13 @@ const MovieInfoBar = ({movie})=>{
     <Wrapper>
         <Content>
             <div className='box'>
-            <p>{`Budget: ${convertMoney(movie.budget)}`} </p>
+
+            <p>{`Running Time: ${calcTime(movie.runtime)}`}  </p>
+            
             </div>
             <div className='box'>
-                <p>{`Running Time: ${calcTime(movie.runtime)}`}  </p>
-            </div>
+            <p>{`Budget: ${convertMoney(movie.budget)}`} </p>       
+                 </div>
             <div className='box'>
             <p>{`Revenue: ${convertMoney(movie.revenue)}`} </p>
             </div>
