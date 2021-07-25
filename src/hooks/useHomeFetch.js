@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 //API
 import API from '../API';
+import { isReloaded } from '../helpers';
 
 const initialMovieState = {
     page: 0,
@@ -39,6 +40,14 @@ export const useHomeFetch = () =>{
 
     // Initial and search
     useEffect(() => {
+        if(!searchTerm){
+            const sessionState =  isReloaded('homeState');
+            if(sessionState){
+                setMovies(sessionState)
+                console.log(sessionState)
+                return;
+            }
+        }
         setMovies(initialMovieState);
         fetchMovies(1, searchTerm);
   
@@ -53,6 +62,14 @@ export const useHomeFetch = () =>{
         console.log(john)
         setIsLoadingMore(false)
     }, [isLoadingMore, searchTerm, movies.page])
+
+
+    useEffect(()=>{
+        if(!searchTerm){
+            sessionStorage.setItem('homeState', JSON.stringify(movies))
+        }
+
+    },[searchTerm, movies])
 
     return {movies, loading, error, searchTerm, setSearchTerm, setIsLoadingMore };
 }
