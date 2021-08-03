@@ -37,7 +37,7 @@ export const UseMovieFetch = (movieId) => {
 
         fetchData();
 
-    }, [])
+    }, [movieId])
 
 
     return {movieDetails, loading, error}

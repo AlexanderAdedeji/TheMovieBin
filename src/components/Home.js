@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from 'react';
-//API
-import API from '../API';
-
+import React from 'react';
 //Hooks
 import useHomeFetch from '../hooks/useHomeFetch';
 //config
@@ -22,9 +19,7 @@ import Button from './Button/Button';
 
 
 const Home = () => {
-    const { movies, loading, error, searchTerm,setSearchTerm, setIsLoadingMore } = useHomeFetch()
-    console.log(movies)
-    console.log(loading)
+    const { movies, loading, searchTerm,setSearchTerm, setIsLoadingMore } = useHomeFetch()
     return (
         <>
 

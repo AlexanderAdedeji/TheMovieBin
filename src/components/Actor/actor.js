@@ -1,7 +1,4 @@
 import React from "react";
-import Grid from '../Grid/Grid'
-import Thumbnails from "../Thumbnails/Thumbnail";
-import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from '../../config';
 import { Image, Wrapper } from "./actor.styles";
 
 

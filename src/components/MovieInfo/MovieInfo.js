@@ -1,14 +1,12 @@
 import React from 'react';
-
 import NoImage from '../../images/no_image.jpg'
-
 import {IMAGE_BASE_URL, POSTER_SIZE} from '../../config';
-
-
-
 import {Wrapper, Content, Text} from './MovieInfo.styles'
 import Thumbnails from '../Thumbnails/Thumbnail';
-import Movie from '../Movie';
+
+
+
+
 
 
 

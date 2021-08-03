@@ -30,7 +30,6 @@ const Movie = () =>{
     if(loading) return <Spinner/>
     if(error) return <div>An Error Occured</div>
 
-    console.log(movieDetails, loading, error, movieId)
 
     return (
         <>
